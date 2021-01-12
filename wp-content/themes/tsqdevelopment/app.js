@@ -100,10 +100,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
 
-
-if (document.getElementsByClassName('splide')) {
-  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default.a('.splide').mount();
-} // document.addEventListener('DOMContentLoaded', () => {
+new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default.a('.splide').mount(); // document.addEventListener('DOMContentLoaded', () => {
 //   if (document.getElementById('loading-screen')) {
 //     setTimeout(() => {
 //       document.getElementById('loading-screen').style.display = 'none';

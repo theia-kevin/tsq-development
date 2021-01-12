@@ -2,9 +2,7 @@ require('alpinejs');
 
 import Splide from '@splidejs/splide';
 
-if (document.getElementsByClassName('splide')) {
-  new Splide('.splide').mount();
-}
+new Splide('.splide').mount();
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   if (document.getElementById('loading-screen')) {
