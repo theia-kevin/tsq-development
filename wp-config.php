@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'tsqdevelopment' );
+define( 'DB_NAME', 'tsq_development' );
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
