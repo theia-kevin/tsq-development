@@ -100,7 +100,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
 
-new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default.a('.splide').mount();
+
+if (document.getElementsByClassName('splide')) {
+  new _splidejs_splide__WEBPACK_IMPORTED_MODULE_0___default.a('.splide').mount();
+} // document.addEventListener('DOMContentLoaded', () => {
+//   if (document.getElementById('loading-screen')) {
+//     setTimeout(() => {
+//       document.getElementById('loading-screen').style.display = 'none';
+//     }, 1000);
+//   }
+// });
 
 /***/ }),
 
@@ -7988,8 +7997,8 @@ var module_Splide = /*#__PURE__*/function (_Core) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\tsqdevelopment\wp-content\themes\tsqdevelopment\js\app.js */"./js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www\tsqdevelopment\wp-content\themes\tsqdevelopment\sass\style.scss */"./sass/style.scss");
+__webpack_require__(/*! C:\laragon\www-experiments-2020\tsq-development\wp-content\themes\tsqdevelopment\js\app.js */"./js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www-experiments-2020\tsq-development\wp-content\themes\tsqdevelopment\sass\style.scss */"./sass/style.scss");
 
 
 /***/ })

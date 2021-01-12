@@ -8,10 +8,10 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="fixed w-full bg-white" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
+<header class="z-50 fixed w-full bg-white" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
     <div class="container mx-auto pt-8 pb-4 flex align items-center justify-between">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex align items-center">
-            <img class="pl-4 xl:pl-0" src="<?php echo get_site_icon_url(); ?>" alt="">
+            <img class="pl-4 xl:pl-0" src="<?php echo get_theme_file_uri( '/images/Group 6.png' ); ?>" alt="">
             <?php
                 if($post->post_title == 'Home') {
                     ?>
@@ -37,7 +37,7 @@
                 </g>
             </svg>
         </div>
-        <div class="fixed inset-0 flex z-40" x-show="sidebarOpen">
+        <div class="fixed inset-0 flex" x-show="sidebarOpen">
             <div class="fixed inset-0" @click="sidebarOpen = false" x-show="sidebarOpen" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
                 <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
             </div>

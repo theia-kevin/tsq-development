@@ -13,7 +13,7 @@ mix.webpackConfig({
 });
 
 mix.browserSync({
-  proxy: 'tsqdevelopment.test'
+  proxy: 'tsq-development.test'
 });
 
 mix.js('js/app.js', 'app.js');
