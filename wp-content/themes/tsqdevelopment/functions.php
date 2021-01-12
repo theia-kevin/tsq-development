@@ -218,9 +218,6 @@ function addNavMenuActiveClass($classes)
 add_filter('nav_menu_css_class', 'addNavMenuActiveClass', 10, 2);
 
 if (function_exists('acf_add_options_page')) {
-
-//    acf_add_options_page();
-
     acf_add_options_page(
         [
             'menu_title' => 'Options',
@@ -239,3 +236,20 @@ if (function_exists('acf_add_options_page')) {
         ]
     );
 }
+
+function changeAdminLoginLogo()
+{ ?>
+    <style type="text/css">
+        body {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/Group%203.png) !important;
+            background-repeat: no-repeat !important;
+            background-size: contain !important;
+            background-position: bottom left !important;
+        }
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/Group%206.png);
+        }
+    </style>
+<?php }
+
+add_action('login_enqueue_scripts', 'changeAdminLoginLogo');
