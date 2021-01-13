@@ -29,8 +29,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @tailwind utilities;
 @tailwind screens;
 
-@import '~@splidejs/splide/dist/css/splide.min.css';
-//@import '~@splidejs/splide/dist/css/splide-core.min.css';
+@import '~swiper/swiper-bundle.css';
 
 .menu {
   .menu-item {
@@ -52,4 +51,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   input {
       @apply bg-grey-02;
   }
+}
+
+.swiper-pagination-bullet {
+  @apply mr-4;
 }

@@ -62,6 +62,6 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "@splidejs/splide": "^2.4.21"
+    "swiper": "^6.4.5"
   }
 }

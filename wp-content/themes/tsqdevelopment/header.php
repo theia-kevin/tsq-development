@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <header class="z-40 fixed w-full bg-white" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
-    <div class="container mx-auto pt-8 pb-4 flex align items-center justify-between">
+    <div class="container mx-auto py-4 flex align items-center justify-between">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="flex align items-center">
             <img class="pl-4 xl:pl-0" src="<?php the_field('header_image_1', 'option'); ?>" alt="">
             <?php
