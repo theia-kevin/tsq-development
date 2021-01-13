@@ -209,7 +209,7 @@ add_filter('body_class', 'addBodyClasses');
 function addNavMenuActiveClass($classes)
 {
     if (in_array('current-menu-item', $classes)) {
-        $classes[] = 'active ';
+        $classes[] = 'active';
     }
 
     return $classes;
@@ -238,18 +238,21 @@ if (function_exists('acf_add_options_page')) {
 }
 
 function changeAdminLoginLogo()
-{ ?>
+{
+    ?>
     <style type="text/css">
         body {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/Group%203.png) !important;
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wordpress-background.png) !important;
             background-repeat: no-repeat !important;
             background-size: contain !important;
             background-position: bottom left !important;
         }
+
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/Group%206.png);
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/wordpress-logo.png);
         }
     </style>
-<?php }
+    <?php
+}
 
 add_action('login_enqueue_scripts', 'changeAdminLoginLogo');

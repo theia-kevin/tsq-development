@@ -7994,8 +7994,8 @@ var module_Splide = /*#__PURE__*/function (_Core) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www-experiments-2020\tsq-development\wp-content\themes\tsqdevelopment\js\app.js */"./js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www-experiments-2020\tsq-development\wp-content\themes\tsqdevelopment\sass\style.scss */"./sass/style.scss");
+__webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\js\app.js */"./js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\sass\style.scss */"./sass/style.scss");
 
 
 /***/ })

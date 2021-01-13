@@ -2,7 +2,6 @@
 get_header();
 ?>
     <div class="container mx-auto pt-36 px-4 lg:px-0">
-        <!-- This example requires Tailwind CSS v2.0+ -->
         <div class="rounded-md bg-red-50 p-4">
             <div class="flex">
                 <div class="flex-shrink-0">
