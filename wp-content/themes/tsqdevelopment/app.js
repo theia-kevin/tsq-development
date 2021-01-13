@@ -107,6 +107,7 @@ var descriptionSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"
   }
 });
 var imageSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.image-swiper-container', {
+  init: false,
   loop: true,
   pagination: {
     el: '.tsq-pagination',
@@ -127,6 +128,13 @@ var imageSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.im
   fadeEffect: {
     crossFade: true
   }
+});
+imageSwiper.on('init', function () {
+  document.getElementById('tsq-current-index').innerHTML = (imageSwiper.realIndex + 1).toString().padStart(2, '0');
+});
+imageSwiper.init();
+imageSwiper.on('slideChange', function () {
+  document.getElementById('tsq-current-index').innerHTML = (imageSwiper.realIndex + 1).toString().padStart(2, '0');
 });
 imageSwiper.on('slideNextTransitionStart', function () {
   descriptionSwiper.slideNext(300, true);
@@ -13836,8 +13844,8 @@ _esm_components_core_core_class__WEBPACK_IMPORTED_MODULE_0__["default"].use(comp
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www-experiments-2020\tsq-development\wp-content\themes\tsqdevelopment\js\app.js */"./js/app.js");
-module.exports = __webpack_require__(/*! C:\laragon\www-experiments-2020\tsq-development\wp-content\themes\tsqdevelopment\sass\style.scss */"./sass/style.scss");
+__webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\js\app.js */"./js/app.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\sass\style.scss */"./sass/style.scss");
 
 
 /***/ })

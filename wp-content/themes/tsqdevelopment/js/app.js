@@ -11,11 +11,12 @@ let descriptionSwiper = new Swiper('.description-swiper-container', {
 });
 
 let imageSwiper = new Swiper('.image-swiper-container', {
+  init: false,
   loop: true,
   pagination: {
     el: '.tsq-pagination',
     type: 'bullets',
-    renderBullet: function (index, className) {
+    renderBullet: (index, className) => {
       return '<span class="' + className + '"></span>';
     },
     clickable: true
@@ -33,11 +34,20 @@ let imageSwiper = new Swiper('.image-swiper-container', {
   },
 });
 
-imageSwiper.on('slideNextTransitionStart', function () {
+imageSwiper.on('init', () => {
+  document.getElementById('tsq-current-index').innerHTML = (imageSwiper.realIndex + 1).toString().padStart(2, '0');
+});
+imageSwiper.init();
+
+imageSwiper.on('slideChange', () => {
+  document.getElementById('tsq-current-index').innerHTML = (imageSwiper.realIndex + 1).toString().padStart(2, '0');
+});
+
+imageSwiper.on('slideNextTransitionStart', () => {
   descriptionSwiper.slideNext(300, true);
 });
 
-imageSwiper.on('slidePrevTransitionStart', function () {
+imageSwiper.on('slidePrevTransitionStart', () => {
   descriptionSwiper.slidePrev(300, true);
 });
 

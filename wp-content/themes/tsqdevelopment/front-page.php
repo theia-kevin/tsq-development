@@ -48,7 +48,9 @@ $query = new WP_Query($args);
                             $query->the_post();
                             ?>
                             <div class="swiper-slide">
-                                <img src="<?php the_field('feature_image'); ?>" alt="">
+                                <a href="<?php echo get_post_permalink(); ?>">
+                                    <img src="<?php the_field('feature_image'); ?>" alt="">
+                                </a>
                             </div>
                         <?php } ?>
                     </div>
@@ -61,15 +63,20 @@ $query = new WP_Query($args);
                                 <img src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
                             </div>
                         </div>
-                        <div class="tsq-pagination py-2"></div>
+                        <div class="flex items-center">
+                            <div class="tsq-pagination py-2 pr-12"></div>
+                            <div id="tsq-current-index" class="text-xl font-extralight pr-0 lg:pr-48"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="flex">
-            <img src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt="">
-            <img src="<?php echo get_theme_file_uri('/images/mail.png'); ?>" alt="">
-            <img src="<?php echo get_theme_file_uri('/images/facebook.png'); ?>" alt="">
+        <div class="container mx-auto flex justify-center lg:justify-start pt-8 lg:pt-0">
+            <div class="inline-flex items-center justify-between">
+                <a href="tel:<?php the_field('telephone', 'option'); ?>"><img class="self-center pl-0 pr-4 lg:px-4" src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt=""></a>
+                <a href="mailto:<?php the_field('email', 'option'); ?>"><img class="self-center px-4" src="<?php echo get_theme_file_uri('/images/mail.png'); ?>" alt=""></a>
+                <a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><img class="self-center px-4" src="<?php echo get_theme_file_uri('/images/facebook.png'); ?>" alt=""></a>
+            </div>
         </div>
     </div>
 <?php
