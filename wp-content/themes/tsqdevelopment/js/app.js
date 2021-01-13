@@ -1,11 +1,13 @@
 require('alpinejs');
 
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation, Pagination]);
+import Swiper from 'swiper/bundle';
 
 let descriptionSwiper = new Swiper('.description-swiper-container', {
-  loop: true
+  loop: true,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 });
 
 let imageSwiper = new Swiper('.image-swiper-container', {
@@ -15,16 +17,28 @@ let imageSwiper = new Swiper('.image-swiper-container', {
     type: 'bullets',
     renderBullet: function (index, className) {
       return '<span class="' + className + '"></span>';
-    }
+    },
+    clickable: true
   },
   navigation: {
     nextEl: '.tsq-next',
     prevEl: '.tsq-prev',
-  }
+  },
+  autoplay: {
+    delay: 3000,
+  },
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 });
 
-imageSwiper.on('slideChange', function () {
+imageSwiper.on('slideNextTransitionStart', function () {
   descriptionSwiper.slideNext(300, true);
+});
+
+imageSwiper.on('slidePrevTransitionStart', function () {
+  descriptionSwiper.slidePrev(300, true);
 });
 
 // document.addEventListener('DOMContentLoaded', () => {

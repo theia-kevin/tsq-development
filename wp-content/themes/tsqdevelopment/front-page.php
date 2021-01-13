@@ -11,124 +11,65 @@ if (get_field('loading_screen', 'option')) {
     </div>
     <?php
 }
-?>
-    <div class="h-full bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
-        'option'); ?>');">
-        <div class="w-full pt-36 px-4 lg:px-0">
-            <div class="grid grid-cols-12">
-                <div class="col-span-12 lg:col-span-4 flex items-end justify-end">
-                    <div class="description-swiper-container swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $args = [
-                                'post_type'  => 'project',
-                                'meta_key'   => 'is_featured',
-                                'meta_value' => '1'
-                            ];
-                            $query = new WP_Query($args);
 
-                            while ($query->have_posts()) {
-                                $query->the_post();
-                                ?>
-                                <div class="swiper-slide">
-                                    <p><?php the_title(); ?></p>
-                                    <p><?php the_field('description_short'); ?></p>
-                                </div>
-                            <?php } ?>
-                        </div>
+$args = [
+    'post_type'  => 'project',
+    'meta_key'   => 'is_featured',
+    'meta_value' => '1',
+    'orderby'    => 'id',
+    'order'      => 'ASC'
+];
+
+$query = new WP_Query($args);
+?>
+    <div class="h-full w-full pt-28 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
+        'option'); ?>');">
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 lg:col-span-4 flex items-end">
+                <div class="description-swiper-container swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php
+                        while ($query->have_posts()) {
+                            $query->the_post();
+                            ?>
+                            <div class="swiper-slide text-center pb-8 lg:text-right lg:pr-24 lg:pb-12">
+                                <div class="font-extralight text-2xl uppercase pb-4"><?php the_title(); ?></div>
+                                <div class="font-extralight text-xl"><?php the_field('description_short'); ?></div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
-                <div class="col-span-12 lg:col-span-8">
-                    <div class="image-swiper-container swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php
-                            $args = [
-                                'post_type'  => 'project',
-                                'meta_key'   => 'is_featured',
-                                'meta_value' => '1'
-                            ];
-                            $query = new WP_Query($args);
-
-                            while ($query->have_posts()) {
-                                $query->the_post();
-                                ?>
-                                <div class="swiper-slide h-auto">
-                                    <img class="object-cover h-full w-full" src="<?php the_field('feature_image'); ?>" alt="">
-                                </div>
-                            <?php } ?>
-                        </div>
-                        <div class="flex justify-between">
-                            <div class="flex py-4">
-                                <div class="tsq-prev cursor-pointer pr-12">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.358" height="17.971" viewBox="0 0 8.358 17.971">
-                                        <defs>
-                                            <style>.a {
-                                                    fill: none;
-                                                    stroke: #212429;
-                                                    stroke-linecap: round;
-                                                    stroke-linejoin: round;
-                                                }</style>
-                                        </defs>
-                                        <path class="a" d="M2508.934,2093.758l-7.152,8.28,7.152,8.28" transform="translate(-2501.282 -2093.052)"/>
-                                    </svg>
-                                </div>
-                                <div class="tsq-next cursor-pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="8.357" height="17.971" viewBox="0 0 8.357 17.971">
-                                        <defs>
-                                            <style>.a {
-                                                    fill: none;
-                                                    stroke: #212429;
-                                                    stroke-linecap: round;
-                                                    stroke-linejoin: round;
-                                                }</style>
-                                        </defs>
-                                        <path class="a" d="M2558.779,2110.318l7.152-8.28-7.152-8.28" transform="translate(-2558.074 -2093.052)"/>
-                                    </svg>
-                                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-8">
+                <div class="image-swiper-container swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php
+                        while ($query->have_posts()) {
+                            $query->the_post();
+                            ?>
+                            <div class="swiper-slide">
+                                <img src="<?php the_field('feature_image'); ?>" alt="">
                             </div>
-                            <div class="tsq-pagination py-2"></div>
+                        <?php } ?>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex py-4">
+                            <div class="tsq-prev cursor-pointer pr-12">
+                                <img src="<?php echo get_theme_file_uri('/images/left-arrow.png'); ?>" alt="">
+                            </div>
+                            <div class="tsq-next cursor-pointer">
+                                <img src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
+                            </div>
                         </div>
+                        <div class="tsq-pagination py-2"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto pt-36 px-4 lg:px-0">
-            <?php
-            the_field('telephone', 'option');
-            print_r('<br><br>');
-
-            the_field('email', 'option');
-            print_r('<br><br>');
-
-            the_field('facebook', 'option');
-            print_r('<br><br>----<br>');
-            ?>
-            <?php
-
-            $args = [
-                'post_type'  => 'project',
-                'meta_key'   => 'is_featured',
-                'meta_value' => '1'
-            ];
-
-            $query = new WP_Query($args);
-
-            while ($query->have_posts()) {
-                $query->the_post();
-
-                the_title();
-                print_r('<br><br>');
-
-                the_field('description_short');
-                print_r('<br><br>');
-
-                the_field('feature_image');
-                print_r('<br><br>');
-
-
-            }
-
-            ?>
+        <div class="flex">
+            <img src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt="">
+            <img src="<?php echo get_theme_file_uri('/images/mail.png'); ?>" alt="">
+            <img src="<?php echo get_theme_file_uri('/images/facebook.png'); ?>" alt="">
         </div>
     </div>
 <?php

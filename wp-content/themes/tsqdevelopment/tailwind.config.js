@@ -22,6 +22,12 @@ module.exports = {
           'grey-02': {
             DEFAULT: '#dededf',
           },
+          'grey-03': {
+            DEFAULT: '#808080',
+          },
+          'grey-04': {
+            DEFAULT: '#4D4D4D',
+          },
         },
       },
     },

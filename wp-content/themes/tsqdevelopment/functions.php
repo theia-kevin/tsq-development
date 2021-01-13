@@ -199,7 +199,7 @@ add_action('wp_loaded', 'hideAdminBar');
 function addBodyClasses($classes)
 {
 
-    $classes[] = 'relative h-full';
+    $classes[] = 'relative h-full px-4 lg:px-0';
 
     return $classes;
 }

@@ -22,7 +22,8 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-@import url('https://use.typekit.net/zgs7jbk.css');
+//@import url('https://use.typekit.net/zgs7jbk.css');
+@import '../fonts.css';
 
 @tailwind base;
 @tailwind components;
@@ -33,7 +34,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 .menu {
   .menu-item {
-    @apply pb-4;
+    @apply pb-8 transition duration-500 ease-in-out;
 
     a {
       @apply font-thin text-3xl text-white uppercase;
@@ -44,15 +45,28 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
         @apply font-normal;
       }
     }
+
+    &:hover {
+      @apply transform translate-x-1 translate-y-1;
+
+      a {
+        @apply font-normal;
+      }
+    }
   }
 }
 
 .wpcf7 {
   input {
-      @apply bg-grey-02;
+    @apply bg-grey-02;
   }
 }
 
 .swiper-pagination-bullet {
-  @apply mr-4;
+  @apply cursor-pointer bg-grey-03 mr-4;
+
+  &-active {
+    @apply bg-grey-04;
+  }
 }
+
