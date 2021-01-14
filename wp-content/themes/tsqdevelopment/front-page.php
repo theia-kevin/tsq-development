@@ -34,7 +34,7 @@ $query = new WP_Query($args);
                             ?>
                             <div class="swiper-slide text-center pb-8 lg:text-right lg:pr-24 lg:pb-12">
                                 <p class="font-extralight text-2xl uppercase pb-4"><?php the_title(); ?></p>
-                                <p class="font-extralight text-xl"><?php the_field('description_short'); ?></p>
+                                <p class="font-normal text-xl"><?php the_field('description_short'); ?></p>
                             </div>
                         <?php } ?>
                     </div>
@@ -65,7 +65,7 @@ $query = new WP_Query($args);
                         </div>
                         <div class="flex items-center">
                             <div class="tsq-pagination py-2 pr-12"></div>
-                            <p id="tsq-current-index" class="text-xl font-extralight pr-0 lg:pr-48"></p>
+                            <p id="tsq-current-index" class="text-xl text-grey-01 font-normal pr-0 lg:pr-48"></p>
                         </div>
                     </div>
                 </div>

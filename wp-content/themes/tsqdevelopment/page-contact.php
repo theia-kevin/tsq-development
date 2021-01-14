@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-    <div class="container mx-auto h-auto lg:h-full w-full pt-36 pb-0 lg:pb-20 px-4 lg:px-0">
+    <div class="container mx-auto h-auto lg:h-full w-full pt-36 pb-0 lg:pb-32 px-4 lg:px-0">
         <div class="h-full grid grid-cols-12 order-2 lg:order-1">
             <div class="col-span-12 lg:col-span-6 flex flex-col justify-end">
                 <div class="flex flex-wrap lg:flex-nowrap justify-between order-2 lg:order-1">
@@ -9,18 +9,18 @@ get_header();
                         <?php
                         foreach (get_field('office', get_the_ID()) as $office) {
                             ?>
-                            <p class="text-base text-grey-01 font-medium pb-2"><?php echo $office['address_line_1'] ?></p>
-                            <p class="text-base text-grey-01 font-extralight pb-2"><?php echo $office['address_line_2'] ?></p>
-                            <p class="text-base text-grey-01 font-extralight pb-2"><?php echo $office['address_line_3'] ?></p>
-                            <p class="text-base text-grey-01 font-extralight pb-2"><?php echo $office['address_line_4'] ?></p>
-                            <p class="text-base text-grey-01 font-extralight pb-2"><?php echo $office['email'] ?></p>
-                            <p class="text-base text-grey-01 font-extralight pb-12"><?php echo $office['telephone'] ?></p>
+                            <p class="text-base text-grey-01 font-semibold pb-2"><?php echo $office['address_line_1'] ?></p>
+                            <p class="text-base text-grey-01 font-normal pb-2"><?php echo $office['address_line_2'] ?></p>
+                            <p class="text-base text-grey-01 font-normal pb-2"><?php echo $office['address_line_3'] ?></p>
+                            <p class="text-base text-grey-01 font-normal pb-2"><?php echo $office['address_line_4'] ?></p>
+                            <p class="text-base text-grey-01 font-normal pb-2"><?php echo $office['email'] ?></p>
+                            <p class="text-base text-grey-01 font-normal pb-12"><?php echo $office['telephone'] ?></p>
                             <?php
                         }
                         ?>
                     </div>
                     <div class="pb-12 lg:mr-12">
-                        <p class="text-base text-grey-01 font-medium pb-2">Quick Enquiry</p>
+                        <p class="text-base text-grey-01 font-semibold pb-2">Quick Enquiry</p>
                         <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form 1"]'); ?>
                     </div>
                 </div>

@@ -1,43 +1,71 @@
 <?php
 get_header();
 ?>
-    <div class="container mx-auto pt-36 px-4 lg:px-0">
-        About
-        <?php
-        print_r('<br><br>');
-
-        the_field('about_title', get_the_ID());
-        print_r('<br><br>');
-
-        the_field('about_description', get_the_ID());
-        print_r('<br><br>');
-
-        echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-        print_r('<br><br>');
-        ?>
-
-        Our Philosophy
-
-        <?php
-        print_r('<br><br>');
-
-        foreach (get_field('philosophy', get_the_ID()) as $philosophy) {
-            print_r($philosophy);
-            print_r('<br><br>');
-        }
-        ?>
-
-        Our Team
-
-        <?php
-        print_r('<br><br>');
-
-        foreach (get_field('team', get_the_ID()) as $team) {
-            print_r($team);
-            print_r('<br><br>');
-        }
-        ?>
-
+    <div class="pt-36 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
+        'option'); ?>');">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12 pb-24 lg:pb-36">
+                <div class="col-span-12 lg:col-span-3 self-end">
+                    <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-28">About</p>
+                </div>
+                <div class="col-span-12 lg:col-span-9 pb-24 lg:pb-56 relative">
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-12 lg:col-span-6 flex flex-col items-start justify-end pr-8 pb-8 lg:pb-0">
+                            <p class="text-6xl text-grey-01 font-medium uppercase pb-12 lg:pb-16 leading-tight"><?php the_field('about_title', get_the_ID()); ?></p>
+                            <p class="text-base text-grey-01 font-normal"><?php the_field('about_description', get_the_ID()); ?></p>
+                        </div>
+                        <div class="col-span-12 lg:col-span-6 self-end">
+                            <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="absolute w-5/6 h-0.5 inset-x-0 left-1/2 transform -translate-x-1/2 bottom-0 bg-grey-01"></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 pb-24 lg:pb-36">
+                <div class="col-span-12 lg:col-span-3">
+                    <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-0">Our Philosophy</p>
+                </div>
+                <div class="col-span-12 lg:col-span-9">
+                    <div class="grid grid-cols-12">
+                        <?php
+                        foreach (get_field('philosophy', get_the_ID()) as $philosophy) {
+                            ?>
+                            <div class="col-span-12 lg:col-span-4 pr-12 pb-8">
+                                <p class="text-2xl text-grey-01 font-medium pb-4"><?php echo $philosophy['philosophy_title']; ?></p>
+                                <p class="text-base text-grey-01 font-normal"><?php echo $philosophy['philosophy_description']; ?></p>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-12 pb-24 lg:pb-36">
+                <div class="col-span-12 lg:col-span-3">
+                    <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-0">Our Team</p>
+                </div>
+                <div class="col-span-12 lg:col-span-9">
+                    <div class="grid grid-cols-12">
+                        <?php
+                        foreach (get_field('team', get_the_ID()) as $team) {
+                            ?>
+                            <div class="col-span-12 lg:col-span-4 lg:pr-12 pb-12 lg:pb-16">
+                                <img class="object-contain" src="<?php echo $team['team_image']; ?>" alt="">
+                                <p class="text-base text-grey-01 font-semibold pt-2"><?php echo $team['team_name']; ?></p>
+                                <p class="text-base text-grey-01 font-normal"><?php echo $team['team_position']; ?></p>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <a href="<?php echo get_permalink(get_page_by_title('Contact')); ?>" class="block flex justify-end">
+                        <p class="font-extralight text-2xl uppercase pr-4">Say Hello</p>
+                        <img class="self-center" src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
+                    </a>
+                </div>
+            </div>
+            <?php get_template_part( 'template-parts/content', 'footer' ); ?>
+        </div>
     </div>
 <?php
 get_footer();

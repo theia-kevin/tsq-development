@@ -10,6 +10,8 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 !wp-content/uploads/
+!wp-content/ai1wm-backups/
+!wp-content/wpvividbackups/
 
 # ignore these plugins
 wp-content/plugins/hello.php

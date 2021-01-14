@@ -1,11 +1,11 @@
 <?php
 get_header();
 ?>
-    <div class="container mx-auto h-auto lg:h-full pt-36 pb-0 lg:pb-20 px-4 lg:px-0">
+    <div class="container mx-auto h-auto lg:h-full pt-36 pb-0 lg:pb-32 px-4 lg:px-0">
         <div class="h-full grid grid-cols-12">
             <div class="col-span-12 lg:col-span-3 flex flex-col justify-end">
-                <div class="text-sm text-grey-01 font-extralight pb-12 order-2 lg:order-1"><?php the_content(); ?></div>
-                <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 order-1 lg:order-2"><?php the_title(); ?></p>
+                <div class="text-base text-grey-01 font-normal pb-12 order-2 lg:order-1"><?php the_content(); ?></div>
+                <p class="text-4xl text-grey-01 font-extralight uppercase order-1 lg:order-2"><?php the_title(); ?></p>
             </div>
             <div class="col-span-12 lg:col-span-9 flex flex-wrap lg:flex-nowrap justify-center">
                 <?php
