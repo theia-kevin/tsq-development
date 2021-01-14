@@ -3,11 +3,17 @@ get_header();
 ?>
     <div class="container mx-auto h-auto lg:h-full pt-36 pb-0 lg:pb-32 px-4 lg:px-0">
         <div class="h-full grid grid-cols-12">
-            <div class="col-span-12 lg:col-span-3 flex flex-col justify-end">
-                <div class="text-base text-grey-01 font-normal pb-12 order-2 lg:order-1"><?php the_content(); ?></div>
-                <p class="text-4xl text-grey-01 font-extralight uppercase order-1 lg:order-2"><?php the_title(); ?></p>
+            <div class="col-span-12 py-4 order-3 lg:order-1">
+                <a href="<?php echo get_permalink(get_page_by_title('Projects')); ?>" class="block flex justify-end lg:justify-start">
+                    <p class="text-2xl text-grey-01 font-extralight uppercase pr-4">View Projects</p>
+                    <img class="self-center" src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
+                </a>
             </div>
-            <div class="col-span-12 lg:col-span-9 flex flex-wrap lg:flex-nowrap justify-center">
+            <div class="col-span-12 lg:col-span-3 flex flex-col justify-end order-1 lg:order-2">
+                <div class="text-sm text-grey-01 font-light pb-12 order-2 lg:order-1"><?php the_content(); ?></div>
+                <p class="text-4xl text-grey-01 font-extralight uppercase order-1 lg:order-2 pb-12 lg:pb-0"><?php the_title(); ?></p>
+            </div>
+            <div class="col-span-12 lg:col-span-9 flex flex-wrap lg:flex-nowrap justify-center order-2 lg:order-3">
                 <?php
                 foreach (get_terms([
                     'taxonomy' => 'service',

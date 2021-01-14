@@ -33,8 +33,8 @@ $query = new WP_Query($args);
                             $query->the_post();
                             ?>
                             <div class="swiper-slide text-center pb-8 lg:text-right lg:pr-24 lg:pb-12">
-                                <p class="font-extralight text-2xl uppercase pb-4"><?php the_title(); ?></p>
-                                <p class="font-normal text-xl"><?php the_field('description_short'); ?></p>
+                                <p class="text-lg text-grey-01 font-extralight uppercase pb-4"><?php the_title(); ?></p>
+                                <p class="text-sm text-grey-01 font-light pb-2"><?php the_field('description_short'); ?></p>
                             </div>
                         <?php } ?>
                     </div>
@@ -65,7 +65,7 @@ $query = new WP_Query($args);
                         </div>
                         <div class="flex items-center">
                             <div class="tsq-pagination py-2 pr-12"></div>
-                            <p id="tsq-current-index" class="text-xl text-grey-01 font-normal pr-0 lg:pr-48"></p>
+                            <p id="tsq-current-index" class="text-2xl text-grey-01 font-extralight pr-0 lg:pr-48"></p>
                         </div>
                     </div>
                 </div>
@@ -73,9 +73,9 @@ $query = new WP_Query($args);
         </div>
         <div class="container mx-auto flex justify-start pt-4">
             <div class="inline-flex items-center justify-between">
-                <a href="tel:<?php the_field('telephone', 'option'); ?>"><img class="self-center pl-0 pr-4 lg:px-4" src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt=""></a>
-                <a href="mailto:<?php the_field('email', 'option'); ?>"><img class="self-center px-4" src="<?php echo get_theme_file_uri('/images/mail.png'); ?>" alt=""></a>
-                <a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><img class="self-center px-4" src="<?php echo get_theme_file_uri('/images/facebook.png'); ?>" alt=""></a>
+                <a href="tel:<?php the_field('telephone', 'option'); ?>"><img class="self-center pl-0 pr-2 lg:px-2" src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt=""></a>
+                <a href="mailto:<?php the_field('email', 'option'); ?>"><img class="self-center px-2" src="<?php echo get_theme_file_uri('/images/mail.png'); ?>" alt=""></a>
+                <a href="<?php the_field('facebook', 'option'); ?>" target="_blank"><img class="self-center px-2" src="<?php echo get_theme_file_uri('/images/facebook.png'); ?>" alt=""></a>
             </div>
         </div>
     </div>

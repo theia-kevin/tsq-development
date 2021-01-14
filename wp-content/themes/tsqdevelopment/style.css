@@ -190206,11 +190206,13 @@ video {
   border-color: rgba(0, 0, 0, var(--tw-border-opacity));
   border-bottom-width: 1px;
   cursor: pointer;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-weight: 300;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   padding-bottom: 0.25rem;
   padding-left: 1rem;
+  --tw-text-opacity: 1;
+  color: rgba(33, 36, 41, var(--tw-text-opacity));
   text-transform: uppercase;
 }
 

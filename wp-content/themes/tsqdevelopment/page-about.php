@@ -12,7 +12,7 @@ get_header();
                     <div class="grid grid-cols-12">
                         <div class="col-span-12 lg:col-span-6 flex flex-col items-start justify-end pr-8 pb-8 lg:pb-0">
                             <p class="text-6xl text-grey-01 font-medium uppercase pb-12 lg:pb-16 leading-tight"><?php the_field('about_title', get_the_ID()); ?></p>
-                            <p class="text-base text-grey-01 font-normal"><?php the_field('about_description', get_the_ID()); ?></p>
+                            <p class="text-sm text-grey-01 font-light pb-2"><?php the_field('about_description', get_the_ID()); ?></p>
                         </div>
                         <div class="col-span-12 lg:col-span-6 self-end">
                             <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
@@ -32,7 +32,7 @@ get_header();
                             ?>
                             <div class="col-span-12 lg:col-span-4 pr-12 pb-8">
                                 <p class="text-2xl text-grey-01 font-medium pb-4"><?php echo $philosophy['philosophy_title']; ?></p>
-                                <p class="text-base text-grey-01 font-normal"><?php echo $philosophy['philosophy_description']; ?></p>
+                                <p class="text-sm text-grey-01 font-light pb-2"><?php echo $philosophy['philosophy_description']; ?></p>
                             </div>
                             <?php
                         }
@@ -52,14 +52,14 @@ get_header();
                             <div class="col-span-12 lg:col-span-4 lg:pr-12 pb-12 lg:pb-16">
                                 <img class="object-contain" src="<?php echo $team['team_image']; ?>" alt="">
                                 <p class="text-base text-grey-01 font-semibold pt-2"><?php echo $team['team_name']; ?></p>
-                                <p class="text-base text-grey-01 font-normal"><?php echo $team['team_position']; ?></p>
+                                <p class="text-sm text-grey-01 font-light pb-2"><?php echo $team['team_position']; ?></p>
                             </div>
                             <?php
                         }
                         ?>
                     </div>
                     <a href="<?php echo get_permalink(get_page_by_title('Contact')); ?>" class="block flex justify-end">
-                        <p class="font-extralight text-2xl uppercase pr-4">Say Hello</p>
+                        <p class="text-2xl text-grey-01 font-extralight uppercase pr-4">Say Hello</p>
                         <img class="self-center" src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
                     </a>
                 </div>
