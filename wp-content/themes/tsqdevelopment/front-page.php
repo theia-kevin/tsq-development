@@ -22,7 +22,7 @@ $args = [
 
 $query = new WP_Query($args);
 ?>
-    <div class="h-full w-full pt-28 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
+    <div class="h-auto lg:h-full w-full pt-28 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="grid grid-cols-12">
             <div class="col-span-12 lg:col-span-4 flex items-end">
@@ -33,8 +33,8 @@ $query = new WP_Query($args);
                             $query->the_post();
                             ?>
                             <div class="swiper-slide text-center pb-8 lg:text-right lg:pr-24 lg:pb-12">
-                                <div class="font-extralight text-2xl uppercase pb-4"><?php the_title(); ?></div>
-                                <div class="font-extralight text-xl"><?php the_field('description_short'); ?></div>
+                                <p class="font-extralight text-2xl uppercase pb-4"><?php the_title(); ?></p>
+                                <p class="font-extralight text-xl"><?php the_field('description_short'); ?></p>
                             </div>
                         <?php } ?>
                     </div>
@@ -65,13 +65,13 @@ $query = new WP_Query($args);
                         </div>
                         <div class="flex items-center">
                             <div class="tsq-pagination py-2 pr-12"></div>
-                            <div id="tsq-current-index" class="text-xl font-extralight pr-0 lg:pr-48"></div>
+                            <p id="tsq-current-index" class="text-xl font-extralight pr-0 lg:pr-48"></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container mx-auto flex justify-center lg:justify-start pt-8 lg:pt-0">
+        <div class="container mx-auto flex justify-start pt-4">
             <div class="inline-flex items-center justify-between">
                 <a href="tel:<?php the_field('telephone', 'option'); ?>"><img class="self-center pl-0 pr-4 lg:px-4" src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt=""></a>
                 <a href="mailto:<?php the_field('email', 'option'); ?>"><img class="self-center px-4" src="<?php echo get_theme_file_uri('/images/mail.png'); ?>" alt=""></a>

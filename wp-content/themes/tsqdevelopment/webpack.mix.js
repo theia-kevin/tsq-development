@@ -17,4 +17,5 @@ mix.browserSync({
 });
 
 mix.js('js/app.js', 'app.js');
+mix.js('js/front-page.js', 'front-page.js');
 mix.sass('sass/style.scss', 'style.css');

@@ -57,8 +57,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 .wpcf7 {
-  input {
-    @apply bg-grey-02;
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    @apply bg-grey-02 w-full;
+  }
+
+  input[type="submit"] {
+    @apply bg-white text-base font-extralight uppercase border-black border-b pl-4 pb-1 cursor-pointer;
   }
 }
 
@@ -70,3 +74,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   }
 }
 
+.scroll-content {
+  @apply h-full;
+}
