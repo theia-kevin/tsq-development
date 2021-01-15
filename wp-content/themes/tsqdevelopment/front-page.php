@@ -2,16 +2,6 @@
 get_header();
 ?>
 <?php
-if (get_field('loading_screen', 'option')) {
-    ?>
-    <div id="loading-screen" x-data="{ loadingScreen: true }">
-        <div class="z-50 absolute h-screen w-screen bg-conver bg-no-repeat bg-center" x-show="loadingScreen" x-on:mouseenter.debounce.600="loadingScreen = false" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="background-image: url('<?php the_field('loading_image',
-            'option'); ?>');">
-        </div>
-    </div>
-    <?php
-}
-
 $args = [
     'post_type'  => 'project',
     'meta_key'   => 'is_featured',
@@ -22,7 +12,7 @@ $args = [
 
 $query = new WP_Query($args);
 ?>
-    <div class="h-auto lg:h-full w-full pt-28 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
+    <div class="h-full w-full pt-28 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="grid grid-cols-12">
             <div class="col-span-12 lg:col-span-4 flex items-end">
@@ -33,7 +23,7 @@ $query = new WP_Query($args);
                             $query->the_post();
                             ?>
                             <div class="swiper-slide text-center pb-8 lg:text-right lg:pr-24 lg:pb-12">
-                                <p class="text-lg text-grey-01 font-extralight uppercase pb-4"><?php the_title(); ?></p>
+                                <p class="text-lg text-grey-01 font-extralight uppercase pb-4 pt-20 lg:pt-0"><?php the_title(); ?></p>
                                 <p class="text-sm text-grey-01 font-light pb-2"><?php the_field('description_short'); ?></p>
                             </div>
                         <?php } ?>

@@ -1,27 +1,48 @@
 <!doctype html>
 <html class="relative h-full"<?php language_attributes(); ?>>
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php
+if (get_field('loading_screen', 'option')) {
+    ?>
+    <div id="loading-screen" x-data="loadingScreen()">
+        <div class="z-50 fixed h-screen w-screen bg-cover bg-no-repeat bg-center" x-show="showLoadingScreen" x-on:load.window.debounce.500="toggleLoadingScreen()" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="background-image: url('<?php the_field('loading_image',
+            'option'); ?>');">
+        </div>
+    </div>
+    <script>
+      function loadingScreen () {
+        return {
+          showLoadingScreen: true,
+          toggleLoadingScreen () {
+            this.showLoadingScreen = !this.showLoadingScreen;
+          }
+        };
+      }
+    </script>
+    <?php
+}
+?>
 <header class="z-40 fixed w-full bg-white" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
     <div class="container mx-auto py-4 flex align items-center justify-between">
         <div class="flex align items-center">
             <?php echo get_custom_logo(); ?>
             <?php
-                if($post->post_title == 'Home') {
-                    ?>
-                    <img class="pl-4" src="<?php the_field('sub_logo_image', 'option'); ?>" alt="">
-                    <?php
-                }
+            if ($post->post_title == 'Home') {
+                ?>
+                <img class="pl-4" src="<?php the_field('sub_logo_image', 'option'); ?>" alt="">
+                <?php
+            }
             ?>
         </div>
         <div class="cursor-pointer mr-8 lg:mr-0" @click.stop="sidebarOpen = true">
-            <img src="<?php echo get_theme_file_uri( '/images/breadcrumb.png' ); ?>" alt="">
+            <img src="<?php echo get_theme_file_uri('/images/breadcrumb.png'); ?>" alt="">
         </div>
         <div class="fixed inset-0 flex" x-show="sidebarOpen">
             <div class="fixed inset-0" @click="sidebarOpen = false" x-show="sidebarOpen" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
@@ -37,14 +58,14 @@
                 </div>
                 <div class="mt-5 flex-1 h-0 overflow-y-auto">
                     <nav class="px-12 space-y-1">
-					    <?php
-					    wp_nav_menu(
-						    array(
-							    'theme_location' => 'menu-1',
-							    'menu_id'        => 'primary-menu',
-						    )
-					    );
-					    ?>
+                        <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'menu-1',
+                                'menu_id'        => 'primary-menu',
+                            )
+                        );
+                        ?>
                     </nav>
                 </div>
             </div>
