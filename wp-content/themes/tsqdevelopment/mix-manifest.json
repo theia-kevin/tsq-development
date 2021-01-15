@@ -4,5 +4,7 @@
     "/app.js.map": "/app.js.map",
     "/style.css.map": "/style.css.map",
     "/front-page.js": "/front-page.js",
-    "/front-page.js.map": "/front-page.js.map"
+    "/front-page.js.map": "/front-page.js.map",
+    "/single-project.js": "/single-project.js",
+    "/single-project.js.map": "/single-project.js.map"
 }

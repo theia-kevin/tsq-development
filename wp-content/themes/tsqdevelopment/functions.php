@@ -163,6 +163,11 @@ function tsqdevelopment_scripts()
         wp_enqueue_script('tsqdevelopment-front-page', get_template_directory_uri() . '/front-page.js', array(),
             _S_VERSION, true);
     }
+
+    if (is_singular('project')) {
+        wp_enqueue_script('tsqdevelopment-single-project', get_template_directory_uri() . '/single-project.js', array(),
+            _S_VERSION, true);
+    }
 }
 
 add_action('wp_enqueue_scripts', 'tsqdevelopment_scripts');
@@ -262,24 +267,3 @@ function changeAdminLoginLogo()
 
 add_action('login_enqueue_scripts', 'changeAdminLoginLogo');
 
-function wpb_add_preloader()
-{
-    echo '<div id="wptime-plugin-preloader"></div>';
-}
-
-add_action('wp_body_open', 'wpb_add_preloader');
-
-function mod_WPTime_plugin_preloader_css()
-{
-
-    ?>
-    <style type="text/css">
-        #wptime-plugin-preloader {
-            background-size: cover;
-        }
-    </style>
-    <?php
-
-}
-
-add_action('wp_head', 'mod_WPTime_plugin_preloader_css');

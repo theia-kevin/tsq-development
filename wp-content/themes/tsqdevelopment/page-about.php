@@ -1,7 +1,7 @@
 <?php
 get_header();
 ?>
-    <div class="pt-36 bg-auto bg-no-repeat bg-left-bottom bg-fixed" style="background-image: url('<?php the_field('background_image',
+    <div class="pt-36 bg-auto bg-no-repeat bg-left-bottom bg-fixed px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="container mx-auto">
             <div class="grid grid-cols-12 pb-24 lg:pb-36">

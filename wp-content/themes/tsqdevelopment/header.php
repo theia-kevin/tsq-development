@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="relative h-full"<?php language_attributes(); ?>>
+<html class="relative h-full" <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 <?php
 if (get_field('loading_screen', 'option')) {
     ?>
-    <div id="loading-screen" x-data="loadingScreen()">
+    <div x-data="loadingScreen()">
         <div class="z-50 fixed h-screen w-screen bg-cover bg-no-repeat bg-center" x-show="showLoadingScreen" x-on:load.window.debounce.500="toggleLoadingScreen()" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="background-image: url('<?php the_field('loading_image',
             'option'); ?>');">
         </div>
@@ -29,7 +29,7 @@ if (get_field('loading_screen', 'option')) {
     <?php
 }
 ?>
-<header class="z-40 fixed w-full bg-white" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
+<header class="z-40 fixed w-full bg-white px-4 lg:px-0" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
     <div class="container mx-auto py-4 flex align items-center justify-between">
         <div class="flex align items-center">
             <?php echo get_custom_logo(); ?>

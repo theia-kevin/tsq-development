@@ -1,13 +1,5 @@
 import Swiper from 'swiper/bundle';
 
-let descriptionSwiper = new Swiper('.description-swiper-container', {
-  loop: true,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-});
-
 let imageSwiper = new Swiper('.image-swiper-container', {
   init: false,
   loop: true,
@@ -39,12 +31,4 @@ imageSwiper.init();
 
 imageSwiper.on('slideChange', () => {
   document.getElementById('tsq-current-index').innerHTML = (imageSwiper.realIndex + 1).toString().padStart(2, '0');
-});
-
-imageSwiper.on('slideNextTransitionStart', () => {
-  descriptionSwiper.slideNext(300, true);
-});
-
-imageSwiper.on('slidePrevTransitionStart', () => {
-  descriptionSwiper.slidePrev(300, true);
 });

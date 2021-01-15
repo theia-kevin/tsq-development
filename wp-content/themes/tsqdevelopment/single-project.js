@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./js/front-page.js":
-/*!**************************!*\
-  !*** ./js/front-page.js ***!
-  \**************************/
+/***/ "./js/single-project.js":
+/*!******************************!*\
+  !*** ./js/single-project.js ***!
+  \******************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -97,13 +97,6 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
 
-var descriptionSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.description-swiper-container', {
-  loop: true,
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  }
-});
 var imageSwiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.image-swiper-container', {
   init: false,
   loop: true,
@@ -133,12 +126,6 @@ imageSwiper.on('init', function () {
 imageSwiper.init();
 imageSwiper.on('slideChange', function () {
   document.getElementById('tsq-current-index').innerHTML = (imageSwiper.realIndex + 1).toString().padStart(2, '0');
-});
-imageSwiper.on('slideNextTransitionStart', function () {
-  descriptionSwiper.slideNext(300, true);
-});
-imageSwiper.on('slidePrevTransitionStart', function () {
-  descriptionSwiper.slidePrev(300, true);
 });
 
 /***/ }),
@@ -11866,17 +11853,17 @@ _esm_components_core_core_class__WEBPACK_IMPORTED_MODULE_0__["default"].use(comp
 
 /***/ }),
 
-/***/ 1:
-/*!********************************!*\
-  !*** multi ./js/front-page.js ***!
-  \********************************/
+/***/ 2:
+/*!************************************!*\
+  !*** multi ./js/single-project.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\js\front-page.js */"./js/front-page.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\js\single-project.js */"./js/single-project.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=front-page.js.map
+//# sourceMappingURL=single-project.js.map
