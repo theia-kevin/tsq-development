@@ -1,0 +1,36 @@
+Log created: 2021-01-15 03:35:31
+Type: backup
+[2021-01-15 03:35:32][notice]Start backing up.
+[2021-01-15 03:35:32][notice]server info fcgi:Off max execution time: 900 wp version:5.6 php version:7.4.13 db version:5.7.24 php ini:safe_mode: memory_limit:256M memory_get_usage:46.63 MB memory_get_peak_usage:47.14 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2021-01-15 03:35:32][notice]Prepare to backup backup_db files.
+[2021-01-15 03:35:32][notice]Start exporting database.
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_commentmeta
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_comments
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_links
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_options
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_postmeta
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_posts
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_term_relationships
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_term_taxonomy
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_termmeta
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_terms
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_usermeta
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_users
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_wpvivid_scan_result
+[2021-01-15 03:35:32][notice]Preparing to dump table wp_wpvivid_unused_uploads_files
+[2021-01-15 03:35:32][notice]Exporting database finished.
+[2021-01-15 03:35:32][notice]Start compressing backup_db
+[2021-01-15 03:35:32][notice]Prepare to zip files. file: tsq-development.test_wpvivid-60010d8398c3c_2021-01-15-03-35_backup_db.zip
+[2021-01-15 03:35:32][notice]Adding zip files completed.tsq-development.test_wpvivid-60010d8398c3c_2021-01-15-03-35_backup_db.zip, filesize: 223.42 KB
+[2021-01-15 03:35:32][notice]Compressing backup_db completed
+[2021-01-15 03:35:32][notice]Backing up backup_db completed.
+[2021-01-15 03:35:32][notice]Prepare to backup backup_merge files.
+[2021-01-15 03:35:32][notice]File number: 1
+[2021-01-15 03:35:32][notice]Start compressing backup_merge
+[2021-01-15 03:35:32][notice]Prepare to zip files. file: tsq-development.test_wpvivid-60010d8398c3c_2021-01-15-03-35_backup_all.zip
+[2021-01-15 03:35:32][notice]Adding zip files completed.tsq-development.test_wpvivid-60010d8398c3c_2021-01-15-03-35_backup_all.zip, filesize: 223.98 KB
+[2021-01-15 03:35:32][notice]Cleaned up file, filename: C:\laragon\www\tsq-development/wp-content\wpvividbackups\tsq-development.test_wpvivid-60010d8398c3c_2021-01-15-03-35_backup_db.zip
+[2021-01-15 03:35:32][notice]Compressing backup_merge completed
+[2021-01-15 03:35:32][notice]Backing up backup_merge completed.
+[2021-01-15 03:35:32][notice]Backup completed.
+[2021-01-15 03:35:32][notice]Backup succeeded.
