@@ -32,7 +32,7 @@ get_header();
                 <div class="text-4xl text-grey-01 font-extralight uppercase">Contact</div>
             </div>
         </div>
-        <?php get_template_part( 'template-parts/content', 'footer' ); ?>
+        <?php get_template_part('template-parts/content', 'footer'); ?>
     </div>
 <?php
 get_footer();
