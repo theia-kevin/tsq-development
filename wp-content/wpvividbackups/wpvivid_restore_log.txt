@@ -1,0 +1,55 @@
+Log created: 2021-01-18 00:30:07
+Type: restore
+[2021-01-18 00:30:07][notice]init restore data
+[2021-01-18 00:30:07][notice]Start restoring tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_all.zip
+[2021-01-18 00:30:07][notice]extract root:C:\laragon\www\tsq-development/wp-content\wpvividbackups\
+[2021-01-18 00:30:07][notice]start extracting file:C:\laragon\www\tsq-development/wp-content\wpvividbackups\tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_all.zip
+[2021-01-18 00:30:07][notice]extract finished file:C:\laragon\www\tsq-development/wp-content\wpvividbackups\tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_all.zip
+[2021-01-18 00:30:07][notice]Finished restoring tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_all.zip
+[2021-01-18 00:30:09][notice]Start restoring tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_db.zip
+[2021-01-18 00:30:09][notice]start extracting file:C:\laragon\www\tsq-development/wp-content\wpvividbackups\tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_db.zip
+[2021-01-18 00:30:09][notice]extract finished file:C:\laragon\www\tsq-development/wp-content\wpvividbackups\tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_db.zip
+[2021-01-18 00:30:09][notice]sql file: tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_db.sql
+[2021-01-18 00:30:09][Warning]wpdb
+[2021-01-18 00:30:09][notice]The test to create table succeeds.
+[2021-01-18 00:30:09][notice]The test to insert into table succeeds.
+[2021-01-18 00:30:09][notice]The test to drop table succeeds.
+[2021-01-18 00:30:09][notice]get max_allowed_packet wpdb 
+[2021-01-18 00:30:09][notice]Start import sql file.
+[2021-01-18 00:30:09][notice]old site url:http://tsq-development.test
+[2021-01-18 00:30:09][notice]old home url:http://tsq-development.test
+[2021-01-18 00:30:09][notice]old content url:http://tsq-development.test/wp-content
+[2021-01-18 00:30:09][notice]old upload url:http://tsq-development.test/wp-content/uploads
+[2021-01-18 00:30:09][notice]old site prefix:wp_
+[2021-01-18 00:30:09][notice]Drop table if exist
+[2021-01-18 00:30:09][notice]Create table wp_commentmeta
+[2021-01-18 00:30:09][notice]Drop table if exist
+[2021-01-18 00:30:09][notice]Create table wp_comments
+[2021-01-18 00:30:09][notice]Drop table if exist
+[2021-01-18 00:30:09][notice]Create table wp_links
+[2021-01-18 00:30:09][notice]Drop table if exist
+[2021-01-18 00:30:09][notice]Create table wp_options
+[2021-01-18 00:30:10][notice]Drop table if exist
+[2021-01-18 00:30:10][notice]Create table wp_postmeta
+[2021-01-18 00:30:11][notice]Drop table if exist
+[2021-01-18 00:30:11][notice]Create table wp_posts
+[2021-01-18 00:30:11][notice]Drop table if exist
+[2021-01-18 00:30:11][notice]Create table wp_term_relationships
+[2021-01-18 00:30:11][notice]Drop table if exist
+[2021-01-18 00:30:11][notice]Create table wp_term_taxonomy
+[2021-01-18 00:30:12][notice]Drop table if exist
+[2021-01-18 00:30:12][notice]Create table wp_termmeta
+[2021-01-18 00:30:12][notice]Drop table if exist
+[2021-01-18 00:30:12][notice]Create table wp_terms
+[2021-01-18 00:30:12][notice]Drop table if exist
+[2021-01-18 00:30:12][notice]Create table wp_usermeta
+[2021-01-18 00:30:12][notice]Drop table if exist
+[2021-01-18 00:30:12][notice]Create table wp_users
+[2021-01-18 00:30:12][notice]Drop table if exist
+[2021-01-18 00:30:12][notice]Create table wp_wpvivid_scan_result
+[2021-01-18 00:30:12][notice]Drop table if exist
+[2021-01-18 00:30:12][notice]Create table wp_wpvivid_unused_uploads_files
+[2021-01-18 00:30:12][notice]Finished restoring tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_db.zip
+[2021-01-18 00:30:13][notice]Restore task completed.
+[2021-01-18 00:30:15][notice]disable maintenance mode
+[2021-01-18 00:30:15][notice]clean file:C:\laragon\www\tsq-development/wp-content\wpvividbackups\tsq-development.test_wpvivid-6004d5d9b63ee_2021-01-18-00-27_backup_db.zip

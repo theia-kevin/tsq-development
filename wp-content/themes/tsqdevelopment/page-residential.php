@@ -18,12 +18,24 @@ $query = new WP_Query([
                     <a class="block text-2xl text-grey-01 <?php echo is_page('Residential') ? 'font-medium' : 'font-extralight'; ?> hover:font-medium uppercase pb-2" href="<?php echo get_permalink(get_page_by_title('Residential')); ?>">Residential</a>
                     <a class="block text-2xl text-grey-01 <?php echo is_page('Subdivision') ? 'font-medium' : 'font-extralight'; ?> hover:font-medium uppercase pb-2" href="<?php echo get_permalink(get_page_by_title('Subdivision')); ?>">Subdivision</a>
                     <a class="block text-2xl text-grey-01 <?php echo is_page('Landscaping') ? 'font-medium' : 'font-extralight'; ?> hover:font-medium uppercase pb-2" href="<?php echo get_permalink(get_page_by_title('Landscaping')); ?>">Landscaping</a>
+                    <a class="block text-2xl text-grey-01 <?php echo is_page('Projects') ? 'font-medium' : 'font-extralight'; ?> hover:font-medium uppercase pb-2" href="<?php echo get_permalink(get_page_by_title('Projects')); ?>">All</a>
                 </div>
                 <div class="py-12 lg:py-0 lg:pb-40 relative">
-                    <a class="text-grey-01 font-extralight hover:font-medium uppercase" href="<?php echo get_permalink(get_page_by_title('Projects')) ?>">
-                        <p class="text-2xl">All</p>
-                        <p class="text-4xl">Projects</p>
-                    </a>
+                    <?php if (is_page('Projects')) {
+                        ?>
+                        <a class="text-grey-01 font-extralight hover:font-medium uppercase" href="<?php echo get_permalink(get_page_by_title('Projects')) ?>">
+                            <p class="text-2xl">All</p>
+                            <p class="text-4xl">Projects</p>
+                        </a>
+                        <?php
+                    } else {
+                        ?>
+                        <a class="text-grey-01 font-extralight hover:font-medium uppercase" href="<?php echo get_permalink(get_page_by_title('Projects')) ?>">
+                            <p class="text-4xl"><?php echo get_the_title(); ?></p>
+                        </a>
+                        <?php
+                    }
+                    ?>
                     <div class="hidden flex flex-col top-0 right-0">
                         <div id="tsq-up" class="cursor-pointer pb-12">
                             <img src="<?php echo get_theme_file_uri('/images/up-arrow.png'); ?>" alt="">
@@ -57,7 +69,7 @@ $query = new WP_Query([
                 <?php } ?>
             </div>
         </div>
-        <?php get_template_part( 'template-parts/content', 'footer' ); ?>
+        <?php get_template_part('template-parts/content', 'footer'); ?>
     </div>
 <?php
 get_footer();
