@@ -1,7 +1,6 @@
 <?php
 get_header();
-?>
-<?php
+
 $field = get_field_object('status');
 $value = $field['value'];
 $label = $field['choices'][$value];
