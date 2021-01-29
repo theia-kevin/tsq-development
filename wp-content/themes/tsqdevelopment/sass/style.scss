@@ -77,3 +77,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .scroll-content {
   @apply h-full;
 }
+
+@layer utilities {
+  .h-1px {
+    height: 1px;
+  }
+}
+

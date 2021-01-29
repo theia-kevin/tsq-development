@@ -17,7 +17,6 @@ $query = new WP_Query([
                     <?php if (is_page('Projects')) {
                         ?>
                         <a class="text-grey-01 font-extralight hover:font-medium uppercase" href="<?php echo get_permalink(get_page_by_title('Projects')) ?>">
-                            <p class="text-2xl">All</p>
                             <p class="text-4xl">Projects</p>
                         </a>
                         <?php
@@ -48,8 +47,8 @@ $query = new WP_Query([
                         <div class="col-span-6 lg:col-span-4 pr-4 lg:pr-0">
                             <div class="inline-block text-right">
                                 <a href="<?php the_permalink(); ?>">
-                                    <p class="block text-2xl text-grey-01 font-medium"><?php the_title(); ?></p>
-                                    <p class="block text-xl text-grey-01 font-normal"><?php the_field('location'); ?></p>
+                                    <p class="block text-xl text-grey-01 font-medium"><?php the_title(); ?></p>
+                                    <p class="block text-lg text-grey-01 font-normal"><?php the_field('location'); ?></p>
                                 </a>
                             </div>
                         </div>

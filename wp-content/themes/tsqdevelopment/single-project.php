@@ -30,10 +30,6 @@ $label = $field['choices'][$value];
                             <p class="text-sm text-grey-01 font-light"><?php the_field('client'); ?></p>
                             <p class="text-sm text-grey-01 font-medium">Design Team</p>
                             <p class="text-sm text-grey-01 font-light"><?php the_field('design_team'); ?></p>
-                            <div class="relative lg:absolute lg:top-full left-0 pt-8 lg:pt-20">
-                                <p class="text-4xl text-grey-01 font-extralight uppercase"><?php the_title(); ?></p>
-                                <p class="text-xl text-grey-01 font-medium"><?php the_field('location'); ?></p>
-                            </div>
                         </div>
                     </div>
                 </div>

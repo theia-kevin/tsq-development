@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <?php
-if (get_field('loading_screen', 'option')) {
+if (get_field('loading_screen', 'option') && is_page( 'Home' )) {
     ?>
     <div x-data="loadingScreen()">
         <div class="z-50 fixed h-screen w-screen bg-cover bg-no-repeat bg-center" x-show="showLoadingScreen" x-on:load.window.debounce.500="toggleLoadingScreen()" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="background-image: url('<?php the_field('loading_image',

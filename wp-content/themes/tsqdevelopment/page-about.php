@@ -4,11 +4,11 @@ get_header();
     <div class="pt-36 bg-auto bg-no-repeat bg-left-bottom bg-fixed px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="container mx-auto">
-            <div class="grid grid-cols-12 pb-24 lg:pb-36">
+            <div class="grid grid-cols-12 pb-24 lg:pb-24">
                 <div class="col-span-12 lg:col-span-3 self-end">
                     <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-28">About</p>
                 </div>
-                <div class="col-span-12 lg:col-span-9 pb-24 lg:pb-56 relative">
+                <div class="col-span-12 lg:col-span-9 pb-24 lg:pb-24 relative">
                     <div class="grid grid-cols-12">
                         <div class="col-span-12 lg:col-span-6 flex flex-col items-start justify-end pr-8 pb-8 lg:pb-0">
                             <p class="text-6xl text-grey-01 font-medium uppercase pb-12 lg:pb-16 leading-tight"><?php the_field('about_title', get_the_ID()); ?></p>
@@ -18,7 +18,7 @@ get_header();
                             <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
                         </div>
                     </div>
-                    <div class="absolute w-5/6 h-0.5 inset-x-0 left-1/2 transform -translate-x-1/2 bottom-0 bg-grey-01"></div>
+                    <div class="absolute w-5/6 h-1px inset-x-0 left-1/2 transform -translate-x-1/2 bottom-0 bg-grey-01"></div>
                 </div>
             </div>
             <div class="grid grid-cols-12 pb-24 lg:pb-36">
