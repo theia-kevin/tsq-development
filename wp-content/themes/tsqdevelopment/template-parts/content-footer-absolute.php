@@ -1,4 +1,4 @@
-<div class="container mx-auto flex flex-col items-end pb-8">
+<div class="relative lg:absolute bottom-0 right-0 pb-8">
     <div class="flex items-center justify-end pb-2">
         <a href="tel:<?php the_field('telephone', 'option'); ?>">
             <img class="self-center" src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt="">

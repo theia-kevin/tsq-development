@@ -191022,6 +191022,11 @@ video {
   }
 }
 
+html, body {
+  height: 100%;
+  position: relative;
+}
+
 .menu .menu-item {
   padding-bottom: 2rem;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;

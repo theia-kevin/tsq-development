@@ -214,7 +214,7 @@ add_action('wp_loaded', 'hideAdminBar');
 function addBodyClasses($classes)
 {
 
-    $classes[] = 'relative h-full';
+    $classes[] = '';
 
     return $classes;
 }

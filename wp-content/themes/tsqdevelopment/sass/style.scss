@@ -32,6 +32,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import '~swiper/swiper-bundle.css';
 
+html, body {
+  @apply relative h-full;
+}
+
 .menu {
   .menu-item {
     @apply pb-8 transition duration-500 ease-in-out;

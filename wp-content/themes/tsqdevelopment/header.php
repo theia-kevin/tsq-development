@@ -9,7 +9,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <?php
-if (get_field('loading_screen', 'option') && is_page( 'Home' )) {
+if (get_field('loading_screen', 'option') && is_page('Home')) {
     ?>
     <div x-data="loadingScreen()">
         <div class="z-50 fixed h-screen w-screen bg-cover bg-no-repeat bg-center" x-show="showLoadingScreen" x-on:load.window.debounce.500="toggleLoadingScreen()" x-transition:enter="transition-opacity ease-linear duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-linear duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" style="background-image: url('<?php the_field('loading_image',
@@ -29,9 +29,9 @@ if (get_field('loading_screen', 'option') && is_page( 'Home' )) {
     <?php
 }
 ?>
-<header class="z-40 fixed w-full bg-white px-4 lg:px-0" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
-    <div class="container mx-auto py-4 flex align items-center justify-between">
-        <div class="flex align items-center">
+<header class="fixed w-full bg-white p-4 lg:px-0 z-40" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
+    <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center">
             <?php echo get_custom_logo(); ?>
             <?php
             if ($post->post_title == 'Home') {
@@ -41,7 +41,7 @@ if (get_field('loading_screen', 'option') && is_page( 'Home' )) {
             }
             ?>
         </div>
-        <div class="cursor-pointer mr-8 lg:mr-0" @click.stop="sidebarOpen = true">
+        <div class="cursor-pointer" @click.stop="sidebarOpen = true">
             <img src="<?php echo get_theme_file_uri('/images/breadcrumb.png'); ?>" alt="">
         </div>
         <div class="fixed inset-0 flex" x-show="sidebarOpen">
@@ -70,5 +70,4 @@ if (get_field('loading_screen', 'option') && is_page( 'Home' )) {
                 </div>
             </div>
         </div>
-    </div>
 </header>
