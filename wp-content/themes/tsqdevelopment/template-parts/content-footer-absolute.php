@@ -10,5 +10,5 @@
             <img class="self-center pl-4" src="<?php echo get_theme_file_uri('/images/facebook.png'); ?>" alt="">
         </a>
     </div>
-    <p class="text-xs text-grey-01 text-right font-light"><?php the_field('copyright', 'option'); ?></p>
+    <p class="font-extralight tracking-wider text-xs text-grey-01 text-right"><?php the_field('copyright', 'option'); ?></p>
 </div>

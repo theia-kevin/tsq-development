@@ -20,17 +20,17 @@ $label = $field['choices'][$value];
                         </a>
                     </div>
                     <div class="mb-8">
-                        <p class="text-sm text-grey-01 font-light pb-4"><?php the_field('description_long'); ?></p>
-                        <p class="text-sm text-grey-01 font-medium">Year</p>
-                        <p class="text-sm text-grey-01 font-light"><?php the_field('year'); ?></p>
-                        <p class="text-sm text-grey-01 font-medium">Status</p>
-                        <p class="text-sm text-grey-01 font-light"><?php echo $label; ?></p>
-                        <p class="text-sm text-grey-01 font-medium">Client</p>
-                        <p class="text-sm text-grey-01 font-light"><?php the_field('client'); ?></p>
-                        <p class="text-sm text-grey-01 font-medium">Design Team</p>
-                        <p class="text-sm text-grey-01 font-light mb-8 lg:mb-48"><?php the_field('design_team'); ?></p>
-                        <p class="text-4xl text-grey-01 font-extralight uppercase mb-4"><?php the_title(); ?></p>
-                        <p class="text-xl text-grey-01 font-medium"><?php the_field('location'); ?></p>
+                        <p class="font-extralight tracking-wider text-base text-grey-01 pb-4"><?php the_field('description_long'); ?></p>
+                        <p class="font-normal tracking-wide text-base text-grey-01">Year</p>
+                        <p class="font-extralight tracking-wider text-base text-grey-01"><?php the_field('year'); ?></p>
+                        <p class="font-normal tracking-wide text-base text-grey-01">Status</p>
+                        <p class="font-extralight tracking-wider text-base text-grey-01"><?php echo $label; ?></p>
+                        <p class="font-normal tracking-wide text-base text-grey-01">Client</p>
+                        <p class="font-extralight tracking-wider text-base text-grey-01"><?php the_field('client'); ?></p>
+                        <p class="font-normal tracking-wide text-base text-grey-01">Design Team</p>
+                        <p class="font-extralight tracking-wider text-base text-grey-01 mb-8 lg:mb-48"><?php the_field('design_team'); ?></p>
+                        <p class="font-extralight uppercase text-4xl text-grey-01 mb-4"><?php the_title(); ?></p>
+                        <p class="font-medium text-xl text-grey-03"><?php the_field('location'); ?></p>
                     </div>
 
                 </div>

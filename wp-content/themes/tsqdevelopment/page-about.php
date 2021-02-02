@@ -64,6 +64,9 @@ get_header();
                             <?php
                         }
                         ?>
+                        <div class="col-span-12 pb-12">
+                            <img src="<?php the_field('group_photo', get_the_ID()); ?>" alt="">
+                        </div>
                     </div>
                     <div class="flex justify-end">
                         <a class="inline-flex text-2xl text-grey-01 font-extralight hover:font-medium uppercase " href="<?php echo get_permalink(get_page_by_title('Contact')); ?>" >

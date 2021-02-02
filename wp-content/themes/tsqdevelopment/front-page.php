@@ -23,8 +23,8 @@ $query = new WP_Query($args);
                             $query->the_post();
                             ?>
                             <div class="swiper-slide text-center lg:text-right px-8 my-8">
-                                <p class="text-lg text-grey-01 font-extralight uppercase"><?php the_title(); ?></p>
-                                <p class="text-sm text-grey-01 font-light"><?php the_field('description_short'); ?></p>
+                                <p class="font-extralight tracking-wide uppercase text-xl text-grey-01"><?php the_title(); ?></p>
+                                <p class="font-extralight tracking-wider text-base text-grey-01"><?php the_field('description_short'); ?></p>
                             </div>
                         <?php } ?>
                     </div>
