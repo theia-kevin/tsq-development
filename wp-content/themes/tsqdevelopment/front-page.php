@@ -15,7 +15,7 @@ $query = new WP_Query($args);
     <div class="h-full bg-auto bg-no-repeat bg-left-bottom bg-fixed pt-32 px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="grid grid-cols-12 gap-x-0 lg:gap-x-16">
-            <div class="col-span-12 lg:col-span-4 flex items-end">
+            <div class="col-span-12 lg:col-span-4 flex items-end" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                 <div class="description-swiper-container swiper-container">
                     <div class="swiper-wrapper">
                         <?php
@@ -30,7 +30,7 @@ $query = new WP_Query($args);
                     </div>
                 </div>
             </div>
-            <div class="col-span-12 lg:col-span-8">
+            <div class="col-span-12 lg:col-span-8" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
                 <div class="image-swiper-container swiper-container">
                     <div class="swiper-wrapper">
                         <?php
@@ -61,7 +61,7 @@ $query = new WP_Query($args);
                 </div>
             </div>
         </div>
-        <div class="container mx-auto">
+        <div class="container mx-auto" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
             <div class="inline-flex items-center">
                 <a href="tel:<?php the_field('telephone', 'option'); ?>">
                     <img class="self-center pr-4" src="<?php echo get_theme_file_uri('/images/phone.png'); ?>" alt="">

@@ -173,6 +173,9 @@ function tsqdevelopment_scripts()
         wp_enqueue_script('tsqdevelopment-single-project', get_template_directory_uri() . '/single-project.js', array(),
             _S_VERSION, true);
     }
+
+    wp_enqueue_script('tsqdevelopment-app', get_template_directory_uri() . '/js/app.js', array(),
+        _S_VERSION, true);
 }
 
 add_action('wp_enqueue_scripts', 'tsqdevelopment_scripts');

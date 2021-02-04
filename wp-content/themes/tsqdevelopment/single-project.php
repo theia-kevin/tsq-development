@@ -8,7 +8,7 @@ $label = $field['choices'][$value];
     <div class="h-auto lg:h-full relative pt-32 px-4 lg:px-0">
         <div class="container mx-auto h-full">
             <div class="grid grid-cols-12 h-full">
-                <div class="col-span-12 lg:col-start-1 lg:col-end-4 flex flex-col justify-start lg:justify-between h-full ">
+                <div class="col-span-12 lg:col-start-1 lg:col-end-4 flex flex-col justify-start lg:justify-between h-full" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                     <div class="pb-8">
                         <a class="block flex justify-start text-2xl text-grey-01 font-extralight hover:font-medium uppercase" href="<?php echo get_permalink(get_page_by_title('Projects')); ?>">
                             <img class="self-center" src="<?php echo get_theme_file_uri('/images/left-arrow.png'); ?>" alt="">
@@ -37,7 +37,7 @@ $label = $field['choices'][$value];
             </div>
         </div>
         <div class="container relative lg:absolute top-0 right-0">
-            <div class="grid grid-cols-12">
+            <div class="grid grid-cols-12" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
                 <div class="col-span-12 lg:col-start-3 lg:col-end-13">
                     <div class="image-swiper-container swiper-container">
                         <div class="swiper-wrapper">

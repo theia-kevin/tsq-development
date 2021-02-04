@@ -4,11 +4,11 @@ get_header();
     <div class="pt-32 bg-auto bg-no-repeat bg-left-bottom bg-fixed px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="relative">
-            <div class="absolute top-0 right-0 hidden lg:block flex items-center">
+            <div class="absolute top-0 right-0 hidden lg:block flex items-center" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
                 <img class="ml-auto lg:w-3/6 xl:w-4/6 2xl:w-full" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
             </div>
             <div class="container mx-auto">
-                <div class="grid grid-cols-12 pb-24 lg:pb-24">
+                <div class="grid grid-cols-12 pb-24 lg:pb-24" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                     <div class="col-span-12 lg:col-span-3 self-end">
                         <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-28">About</p>
                     </div>
@@ -28,7 +28,7 @@ get_header();
             </div>
         </div>
         <div class="container mx-auto">
-            <div class="grid grid-cols-12 pb-24 lg:pb-36">
+            <div class="grid grid-cols-12 pb-24 lg:pb-36" data-aos="fade-left" data-aos-duration="2000" data-aos-once="true">
                 <div class="col-span-12 lg:col-span-3">
                     <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-0">Our Philosophy</p>
                 </div>
@@ -47,7 +47,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-12 pb-24 lg:pb-36">
+            <div class="grid grid-cols-12 pb-24 lg:pb-36" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
                 <div class="col-span-12 lg:col-span-3">
                     <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-0">Our Team</p>
                 </div>

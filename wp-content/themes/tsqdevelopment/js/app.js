@@ -5,3 +5,7 @@ require('alpinejs');
 // Scrollbar.init(document.body, {
 //   damping: 0.2,
 // });
+
+import AOS from 'aos';
+
+AOS.init();
