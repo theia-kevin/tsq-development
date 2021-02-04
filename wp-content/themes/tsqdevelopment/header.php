@@ -29,7 +29,7 @@ if (get_field('loading_screen', 'option') && is_page('Home')) {
     <?php
 }
 ?>
-<header class="fixed w-full bg-white p-4 lg:px-0 z-40" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
+<header class="fixed w-full bg-white pt-8 px-4 lg:px-0 z-40" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
     <div class="container mx-auto flex items-center justify-between">
         <div class="flex items-center">
             <?php echo get_custom_logo(); ?>

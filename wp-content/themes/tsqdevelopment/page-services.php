@@ -1,11 +1,11 @@
 <?php
 get_header();
 ?>
-    <div class="container mx-auto h-auto lg:h-full pt-28 px-4 lg:px-0 relative">
+    <div class="container mx-auto h-auto lg:h-full pt-32 px-4 lg:px-0 relative">
         <div class="grid grid-cols-12">
             <div class="col-span-12 order-3 lg:order-1 pb-16">
                 <a class="inline-flex" href="<?php echo get_permalink(get_page_by_title('Projects')); ?>">
-                    <p class="text-2xl text-grey-01 font-extralight uppercase pr-4">View Projects</p>
+                    <p class="text-2xl text-grey-01 font-extralight uppercase pr-4">View&nbsp;&nbsp;Projects</p>
                     <img class="self-center" src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
                 </a>
             </div>

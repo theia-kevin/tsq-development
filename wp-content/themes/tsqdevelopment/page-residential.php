@@ -11,7 +11,7 @@ $query = new WP_Query([
     ]
 ]);
 ?>
-    <div class="container mx-auto pt-36 px-4 lg:px-0">
+    <div class="container mx-auto pt-32 px-4 lg:px-0">
         <div class="grid grid-cols-12">
             <div class="col-span-12 lg:col-span-3 flex flex-row lg:flex-col justify-between h-auto lg:h-screen">
                 <div>

@@ -12,7 +12,7 @@ $args = [
 
 $query = new WP_Query($args);
 ?>
-    <div class="h-full bg-auto bg-no-repeat bg-left-bottom bg-fixed pt-28 px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
+    <div class="h-full bg-auto bg-no-repeat bg-left-bottom bg-fixed pt-32 px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="grid grid-cols-12 gap-x-0 lg:gap-x-16">
             <div class="col-span-12 lg:col-span-4 flex items-end">

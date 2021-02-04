@@ -1,9 +1,9 @@
 <?php
 get_header();
 ?>
-    <div class="h-auto lg:h-full relative pt-28 lg:pt-0 px-4 lg:px-0">
+    <div class="h-auto lg:h-full relative pt-32 lg:pt-0 px-4 lg:px-0">
         <div class="absolute top-28 right-0 hidden lg:block">
-            <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
+            <img class="ml-auto lg:w-3/6 xl:w-4/6 2xl:w-full" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
         </div>
         <div class="container mx-auto h-full relative">
             <div class="h-full grid grid-cols-12">

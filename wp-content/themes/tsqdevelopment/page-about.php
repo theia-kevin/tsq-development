@@ -1,11 +1,11 @@
 <?php
 get_header();
 ?>
-    <div class="pt-28 bg-auto bg-no-repeat bg-left-bottom bg-fixed px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
+    <div class="pt-32 bg-auto bg-no-repeat bg-left-bottom bg-fixed px-4 lg:px-0" style="background-image: url('<?php the_field('background_image',
         'option'); ?>');">
         <div class="relative">
-            <div class="absolute top-0 right-0 hidden lg:block">
-                <img src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
+            <div class="absolute top-0 right-0 hidden lg:block flex items-center">
+                <img class="ml-auto lg:w-3/6 xl:w-4/6 2xl:w-full" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
             </div>
             <div class="container mx-auto">
                 <div class="grid grid-cols-12 pb-24 lg:pb-24">
@@ -14,11 +14,11 @@ get_header();
                     </div>
                     <div class="col-span-12 lg:col-span-9 pb-24 lg:pb-24 relative">
                         <div class="grid grid-cols-12">
-                            <div class="col-span-12 lg:col-span-6 flex flex-col items-start justify-end pr-8 pb-8 lg:pb-0">
-                                <p class="text-6xl text-grey-01 font-medium uppercase pb-12 lg:pb-16 leading-tight"><?php the_field('about_title', get_the_ID()); ?></p>
+                            <div class="col-span-12 lg:col-span-5 flex flex-col items-start justify-end pr-8 pb-8 lg:pb-0">
+                                <p class="text-5xl text-grey-01 font-medium uppercase pb-12 lg:pb-16 leading-tight"><?php the_field('about_title', get_the_ID()); ?></p>
                                 <p class="text-sm text-grey-01 font-light pb-2"><?php the_field('about_description', get_the_ID()); ?></p>
                             </div>
-                            <div class="col-span-12 lg:col-span-6 self-end">
+                            <div class="col-span-12 lg:col-span-7 self-end">
                                 <img class="block lg:hidden" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>" alt="">
                             </div>
                         </div>

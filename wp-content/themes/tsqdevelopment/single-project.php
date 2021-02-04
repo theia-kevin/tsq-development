@@ -5,7 +5,7 @@ $field = get_field_object('status');
 $value = $field['value'];
 $label = $field['choices'][$value];
 ?>
-    <div class="h-auto lg:h-full relative pt-28 px-4 lg:px-0">
+    <div class="h-auto lg:h-full relative pt-32 px-4 lg:px-0">
         <div class="container mx-auto h-full">
             <div class="grid grid-cols-12 h-full">
                 <div class="col-span-12 lg:col-start-1 lg:col-end-4 flex flex-col justify-start lg:justify-between h-full ">
