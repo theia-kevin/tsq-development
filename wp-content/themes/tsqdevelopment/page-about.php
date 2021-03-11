@@ -47,35 +47,12 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-12 pb-24 lg:pb-36" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">
-                <div class="col-span-12 lg:col-span-3">
-                    <p class="text-4xl text-grey-01 font-extralight uppercase pb-12 lg:pb-0">Our Team</p>
-                </div>
-                <div class="col-span-12 lg:col-span-9">
-                    <div class="grid grid-cols-12">
-                        <?php
-                        foreach (get_field('team', get_the_ID()) as $team) {
-                            ?>
-                            <div class="col-span-12 lg:col-span-4 lg:pr-12 pb-12 lg:pb-16">
-                                <img class="object-contain" src="<?php echo $team['team_image']; ?>" alt="">
-                                <p class="text-base text-grey-01 font-semibold pt-2"><?php echo $team['team_name']; ?></p>
-                                <p class="text-sm text-grey-01 font-light pb-2"><?php echo $team['team_position']; ?></p>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                        <div class="col-span-12 pb-12">
-                            <img src="<?php the_field('group_photo', get_the_ID()); ?>" alt="">
-                        </div>
-                    </div>
-                    <div class="flex justify-end">
-                        <a class="inline-flex text-2xl text-grey-01 font-extralight hover:font-medium uppercase " href="<?php echo get_permalink(get_page_by_title('Contact')); ?>" >
-                            <div class="pr-4">Say Hello</div>
-                            <img class="self-center" src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
-                        </a>
-                    </div>
-                </div>
-            </div>
+			<div class="flex justify-end">
+				<a class="inline-flex text-2xl text-grey-01 font-extralight hover:font-medium uppercase " href="<?php echo get_permalink(get_page_by_title('Contact')); ?>" >
+					<div class="pr-4">Say Hello</div>
+					<img class="self-center" src="<?php echo get_theme_file_uri('/images/right-arrow.png'); ?>" alt="">
+				</a>
+			</div>
             <?php get_template_part( 'template-parts/content', 'footer' ); ?>
         </div>
     </div>
