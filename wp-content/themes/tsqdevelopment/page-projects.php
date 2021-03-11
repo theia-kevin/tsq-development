@@ -44,7 +44,7 @@ $query = new WP_Query([
                 while ($query->have_posts()) {
                     $query->the_post();
                     ?>
-                    <div class="grid grid-cols-12" data-aos="<?php echo ($i % 3 == 0) ? 'fade-left' : 'fade-right'; ?>" data-aos-duration="2000" data-aos-offset="500" data-aos-once="true">
+                    <div class="grid grid-cols-12" data-aos="<?php echo ($i % 3 == 0) ? 'fade-left' : 'fade-right'; ?>" data-aos-duration="2000" data-aos-offset="200" data-aos-once="true">
                         <div class="col-span-6 lg:col-span-4 pr-4 lg:pr-0">
                             <div class="inline-block text-right">
                                 <a href="<?php the_permalink(); ?>">
