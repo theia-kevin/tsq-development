@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\tsq-development\wp-content\themes\tsqdevelopment\js\page-project.js */"./js/page-project.js");
+module.exports = __webpack_require__(/*! C:\laragon\www-theia-2020\tsq-development\wp-content\themes\tsqdevelopment\js\page-project.js */"./js/page-project.js");
 
 
 /***/ })
