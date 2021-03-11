@@ -23,12 +23,8 @@ $label = $field['choices'][$value];
                         <p class="font-extralight tracking-wider text-base text-grey-01 pb-4"><?php the_field('description_long'); ?></p>
                         <p class="font-normal tracking-wide text-base text-grey-01">Year</p>
                         <p class="font-extralight tracking-wider text-base text-grey-01"><?php the_field('year'); ?></p>
-                        <p class="font-normal tracking-wide text-base text-grey-01">Status</p>
-                        <p class="font-extralight tracking-wider text-base text-grey-01"><?php echo $label; ?></p>
                         <p class="font-normal tracking-wide text-base text-grey-01">Client</p>
-                        <p class="font-extralight tracking-wider text-base text-grey-01"><?php the_field('client'); ?></p>
-                        <p class="font-normal tracking-wide text-base text-grey-01">Design Team</p>
-                        <p class="font-extralight tracking-wider text-base text-grey-01 mb-8 lg:mb-48"><?php the_field('design_team'); ?></p>
+                        <p class="font-extralight tracking-wider text-base text-grey-01 mb-8 lg:mb-48"><?php the_field('client'); ?></p>
                         <p class="font-extralight uppercase text-4xl text-grey-01 mb-4"><?php the_title(); ?></p>
                         <p class="font-medium text-xl text-grey-03"><?php the_field('location'); ?></p>
                     </div>
@@ -38,7 +34,7 @@ $label = $field['choices'][$value];
         </div>
         <div class="container relative lg:absolute top-0 right-0">
             <div class="grid grid-cols-12" data-aos="fade-down" data-aos-duration="2000" data-aos-once="true">
-                <div class="col-span-12 lg:col-start-3 lg:col-end-13">
+                <div class="col-span-12 lg:col-start-5 xl:col-start-3 lg:col-end-13 mt-0 lg:mt-32 xl:mt-28">
                     <div class="image-swiper-container swiper-container">
                         <div class="swiper-wrapper">
                             <?php
