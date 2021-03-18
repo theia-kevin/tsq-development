@@ -1,7 +1,13 @@
 const {colors: defaultColors} = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: true,
+    content: [
+      './js/*.js',
+      '*.php',
+    ],
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
