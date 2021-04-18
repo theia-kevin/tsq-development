@@ -6,8 +6,8 @@ $args = [
     'post_type'  => 'project',
     'meta_key'   => 'is_featured',
     'meta_value' => '1',
-    'orderby'    => 'id',
-    'order'      => 'ASC'
+    'orderby'    => 'modified',
+    'order'      => 'DESC'
 ];
 
 $query = new WP_Query($args);

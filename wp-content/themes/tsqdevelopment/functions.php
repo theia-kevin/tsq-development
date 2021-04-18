@@ -275,3 +275,16 @@ function changeAdminLoginLogo()
 
 add_action('login_enqueue_scripts', 'changeAdminLoginLogo');
 
+function setPostsOrder($query)
+{
+    if ($query->is_admin) {
+
+        if ($query->get('post_type') == 'projects') {
+            $query->set('orderby', 'modified');
+            $query->set('order', 'DESC');
+        }
+    }
+    return $query;
+}
+
+add_filter('pre_get_posts', 'setPostsOrder');
